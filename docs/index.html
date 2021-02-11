@@ -132,9 +132,8 @@
 			setTimeout(function(){ $("#scrolling").fadeOut(); }, 5000);
 		}
 		
-		$(".caja").scrollstart(scrolling);
-		
-		function scrolling () {
+		$(".caja" ).on( "scrollstart", 		
+		function () {
 			// body... 
 			console.log('está scroleando');
 			$('#spoti').hide();
@@ -142,7 +141,7 @@
 			$('#bio').hide();
 			$("#scrolling").fadeIn();
 			setTimeout(function(){ $("#scrolling").fadeOut(); }, 5000);
-		}
+		});
 		
 		function recagarTitulo () {
 			// body... 

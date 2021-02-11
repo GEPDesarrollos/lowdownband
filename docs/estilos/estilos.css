@@ -1,0 +1,202 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1440px;
+	background-color: #2E0B29;
+}
+audio {
+	display: none;
+}
+/*.item{
+	background-color: rgba(0,25,25,.8);
+}*/
+
+h1 ,
+ p {
+	font-family: 'Audiowide', cursive;
+}
+
+h2{
+	font-family: 'Open Sans', sans-serif;
+}
+.caja {
+	height: 100vh;
+}
+
+.text-cen{
+	text-align: center;
+}
+	
+.encabezado {
+	background-image: url('../imagenes/lowBand (360x270).png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: white;
+	
+}
+
+.cajas {
+	display: none;
+}
+
+.vacio{
+	height: 170px;
+}
+
+.line{
+	vertical-align: middle;
+}
+
+.cincuenta{
+	width: 50%;
+	float: left;
+}
+
+.conte_y_foot{
+	display: grid;
+	grid-template-rows: 1fr auto;
+	height: calc(100vh - 305px);
+
+}
+
+.contenidos{
+	grid-row: 1;
+}
+
+footer{
+	grid-row: 2;
+	color: snow;
+}
+
+.redes img{
+	width: 6.5vw;
+}
+
+.redes ul {
+	list-style-type: none;
+	float: left;
+
+}
+
+.redes ul li {
+	display: inline-block;
+}
+
+.created a{
+	color: #9257C9;
+}
+
+@media (min-width: 600px) or (orientation: landscape) { 
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image: url('../imagenes/lowBand_1920.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+
+}
+
+.encabezado{
+	background-color: rgba(46, 11, 41, 0.9);
+	background-image: none;
+	vertical-align: text-bottom;
+	height: 55px;
+
+}
+.navi_uno{
+	width: 50%;
+	float: left;
+	line-height: 3em;
+}
+
+header{ 
+	line-height: 3em;
+ }
+
+.navi_uno img {
+	display: none;
+}
+
+.vacio{
+	display: none;
+}
+
+.cajas {
+	display: none;
+}
+
+.conte_y_foot{
+	display: grid;
+	grid-template-rows: 1fr auto;
+	height: calc(100vh - 55px);
+
+}
+.created {
+	padding-top:  0.5em;
+	padding-left: 4em;
+	position: relative;
+}
+
+
+
+}
+
+@media (min-width: 900px) { 
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image: url('../imagenes/lowBand_1920.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+
+}
+
+.encabezado{
+	background-color: rgba(46, 11, 41, 0.9);
+	background-image: none;
+	vertical-align: text-bottom;
+	height: 55px;
+
+}
+
+.navi_uno{
+	line-height: 3em;
+	width: 50%;
+	float: left;
+}
+
+.navi_uno img {
+	display: none;
+}
+
+.cajas {
+	display: none;
+}
+
+.vacio{
+	display: none;
+}
+
+
+.conte_y_foot{
+	display: grid;
+	grid-template-rows: 1fr auto;
+	height: calc(100vh - 55px);
+
+}
+
+.created {
+	padding-top: 2em;
+}
+
+}

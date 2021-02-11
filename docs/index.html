@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="estilos/estilos.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans&display=swap" rel="stylesheet"> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="caja">
+		<div class="encabezado">
+			
+			<div class="item vacio"></div>
+
+			<nav>			
+				<div class="navi_uno item text-cen">
+					
+					<h2 class="spoti line cincuenta"><img src="imagenes/spotify.png" style="width: 5vw; padding-right: .2em;padding-bottom: .15em;" alt="">Spotify</h2>	
+					<h2 class="youtube cincuenta"><img src="imagenes/youtube.png" style="width: 6vw;" alt="">YouTube</h2>	
+				</div>
+			</nav>
+
+			<header class="text-cen item">
+				<h1>Low Down</h1>
+				<audio src="audio/lowdown-the-world-has-ended.mp3" controls="true" id="audio"></audio>
+			</header>
+		</div>
+		<div class="conte_y_foot">
+			
+		<div class="contenidos">
+			<iframe src="https://open.spotify.com/embed/artist/5BoJT4BgRiZcIqA9ECswba" width="100%" height="98%" frameborder="0" allowtransparency="true" allow="encrypted-media" id="spoti" class="cajas"></iframe>
+			<iframe id="youtube" class="cajas"width="100%" height="98%" src="https://www.youtube.com/embed/EIHcP1EZsZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
+			<!--div id="bio" class="cajas"-->
+				<iframe width="100%" height="98%" src="bio.html" id="bio" class="cajas" frameborder="1px" scrolling="auto"></iframe>
+			<!--/div-->
+			<!--div id="scrolling" class="cajas"-->
+				<iframe width="100%" id="scrolling" class="cajas" height="98%" src="scrolling.html" frameborder="1px"></iframe>
+			<!--/div-->	
+		</div>
+		<footer class="text-cen line">
+			<div class="redes cincuenta">
+				<ul>
+					
+				<li><a href=""><img src="imagenes/instagram_circle_gray_107138.webp" alt="Instagram"></a></li>
+				<li><a href=""><img src="imagenes/facebook_circle_gray_107140.webp" alt="Facebook"></a></li>
+				<li><a href=""><img src="imagenes/twitter_circle_gray_107135.webp" alt="Twitter"></a></li>
+				
+				</ul>
+								
+			</div>
+			<div class="created  cincuenta">
+				<p>by <a href="https://www.gepwebdesign.com" target="_blanck">GEP WebDesign</a></p>
+			</div>
+		</footer>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$('h2').css('cursor' , 'pointer');
+		$('h1').css('cursor' , 'pointer');
+		var playing = false;
+		
+
+		$('h1').click(escucharBanda);
+		$('h2.spoti').click(toggleSpotify);
+		$('h2.youtube').click(toggleYoutube);
+
+		function toggleSpotify () {
+			// body... 
+			//alert($('.contenedor').css("color"));
+			$('#youtube').hide();
+			$('#bio').hide();
+			$("#scrolling").hide();
+			audio.pause();
+			$('#spoti').fadeToggle();
+			$('h2.spoti').fadeOut();
+			$('h2.spoti').fadeIn();
+
+			
+			console.log('estoy en SPOTIFY');
+
+		}
+
+		function toggleYoutube () {
+			// body... 
+			$("#youtube").fadeToggle();
+			//if(($("#spoti").show())){
+			//}	
+			audio.pause();
+			$('#spoti').hide();
+			$('#bio').hide();
+			$("#scrolling").hide();
+			$('h2.youtube').fadeOut();
+			$('h2.youtube').fadeIn();
+			console.log('estoy en YOUTUBE');
+		}
+		function escucharBanda () {
+			// body... 
+			var audio = document.getElementById("audio");
+			if (!playing) {
+				audio.currentTime= 0;
+				audio.play();
+				playing = true;
+				$('h1').fadeOut();
+				$('h1').fadeIn();
+				$('#spoti').hide();
+				$('#youtube').hide();
+				$("#scrolling").hide();
+				$('#bio').fadeIn();
+
+			} else {
+				audio.pause();
+				playing = false;
+				$('h1').fadeOut();
+				$('h1').fadeIn();
+				$('#bio').fadeOut();
+				//$('audio').fadeOut();
+				
+			}
+		}
+
+		document.querySelector(".caja").onwheel = function () {
+			// body... 
+			console.log('está scroleando');
+			$('#spoti').hide();
+			$('#youtube').hide();
+			$('#bio').hide();
+			$("#scrolling").fadeIn();
+			setTimeout(function(){ $("#scrolling").fadeOut(); }, 5000);
+		}
+		
+		function recagarTitulo () {
+			// body... 
+			setInterval(function () {
+				/* body... */
+				$('h1').fadeOut();
+				$('h1').fadeIn();
+			}, 5200);
+			setInterval(function () {
+				/* body... */
+			$('h2.spoti').fadeOut();
+			$('h2.spoti').fadeIn();
+			},5300);
+			
+			setInterval(function (
+		  ) {
+				/* body... */
+			$('h2.youtube').fadeOut();
+			$('h2.youtube').fadeIn();
+			},5500);
+		}
+	 	
+	 	recagarTitulo();
+		
+	
+	</script>
+</body>
+</html>

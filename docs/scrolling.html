@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+	<style>
+		body {
+			color: white;
+    		font-family: 'Pathway Gothic One', sans-serif;
+    		text-align: center;
+    		background-color: rgba(0,0,0,.7);
+
+
+		}
+		h1{
+			text-decoration: underline;
+
+		}
+		p{
+			font-size: 1.5em;
+		}
+		a {
+			font-size: 1.5em;
+			color: #a6281b;
+			text-decoration: none;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+	<h1>Created by GEP WebDesign</h1>
+	<br>
+	<p>Email:</p> <a href="mailto:gepdesarrollodeapps@gmail.com">gepdesarrollodeapps@gmail.com</a><br>
+	<p id="press">PRESS ON TITLES TO SEE THE CONTENT</p>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+
+		function recagarTitulo () {
+			// body... 
+			setInterval(function () {
+				/* body... */
+				$('#press').fadeOut();
+				$('#press').fadeIn();
+			}, 1000);
+			
+		}
+	 	
+	 	recagarTitulo();
+
+		
+	</script>
+
+
+</body>
+</html>
